@@ -41,6 +41,10 @@ jobs:
     - name: Node Build (lint, test, coverage, doc, build, package)
       run: npm run package
 
+    - name: Add artifact
+      run: |
+        date >> docs/index.html
+
     # Commit and push all changed files. 
     # Must only affect files that are listed in "paths-ignore".
     - name: GIT Commit Build Artifacts (coverage, dist, devdist, docs)
