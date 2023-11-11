@@ -45,6 +45,6 @@ jobs:
       run: |
         git config --global user.name "${{ env.CI_COMMIT_AUTHOR }}"
         git config --global user.email "buhtig.hans.maerki@ergoinfo.ch"
-        git add coverage devdist dist docs
+        git add docs/index.html
         git commit -m "${{ env.CI_COMMIT_MESSAGE }}"
         git push
